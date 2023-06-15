@@ -1,0 +1,81 @@
+body {
+  width: 100%;
+  height: 100vh;
+  margin: 0; 
+  /* background-color: #e8b3408b; */
+  background-image: url("https://echoeoe.github.io/Movie-Form/background.png");
+  color: #000000;
+  font-family: 'Permanent Marker';
+  font-size: 18px;
+}
+
+h1, p[id="description"]{
+  margin: 1em auto;
+  text-align: center;
+}
+
+form{
+  margin: 0 auto; /*center form element within body*/
+  max-width: 800px; 
+  min-width: 400px; 
+  width: 60vw; 
+  padding: 0 0 2em 0; /*form bottom padding*/
+}
+
+@media (max-width: 999px) {
+  form {
+    width: 90vw;
+  }
+}
+
+@media (min-width: 1000px) {
+  form {
+    width: 35vw;
+  }
+}
+
+fieldset{
+  border: none;
+  margin: 2rem 0;
+  border-bottom: 3px groove #d07f34e2; /*separation lines*/
+  padding-bottom: 1rem;
+}
+
+fieldset:last-of-type{ /*last fieldset, remove line underneath*/
+  border-bottom: none;
+}
+
+label {
+  display: block;
+  margin: 0.5rem 0;
+}
+
+input, textarea, select{ /* all input types */
+  margin: 10px 0 0 0;
+  width: 100%;
+  min-height: 2em;
+}
+
+.inline{ /*non-text clickable inputs*/
+  width: unset; /*put input and label back on same line*/
+  margin: 0 0.5em 0 0; /*distance between input and label*/
+  vertical-align: middle;
+} 
+
+input, textarea, select{
+  background-color: #ffffff;
+  border: 2px solid #000000;
+  color: #000000;
+}
+
+input[type="submit"]{
+  display: block;
+  width: 65%;
+  margin: 1em auto; /*center submit button*/
+  height: 2em;
+  font-size: 1.1rem;
+  background-color: #c79441;
+  border-color: black;
+  min-width: 300px;
+  margin-top: -1.5em;
+}
