@@ -1,0 +1,49 @@
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width-device-width, intial-scale=1.0">
+    <title>Build a Movie with AI</title>
+    <link rel="stylesheet" href="https://echoeoe.github.io/Movie-Form/styles.css">
+  </head>
+  <body>
+    <h1 id="title">Build a Movie with AI!</h1>
+    <p id="description">What kind of movie do you want AI to create?</p>
+    <form id="movie-form">
+      <fieldset> <!-- personal info fieldset -->
+        <label id="name-label" for="name" id="name-label">Name: <input required type="text" id="name" placeholder="enter your name"></label>
+        <label for="email" id="email-label">Email: <input required type="email" id="email" placeholder="enter your email"></label> 
+        <label for="number" id="number-label">Age: <input type="number" id="number" min=13 max=120 placeholder="age"></label>
+      </fieldset>
+      <fieldset> <!-- genre, rating, runtime fieldset -->
+        <label id="dropdown-label" for="dropdown">Genre: 
+          <select id="dropdown" name="dropdown">
+            <option value="action">action</option>
+            <option value="crime">crime</option>
+            <option value="drama">drama</option>
+            <option value="comedy">comedy</option>
+            <option value="horror" disabled>horror</option>
+            <option value="fantasy">fantasy</option>
+            <option value="sci-fi">sci-fi</option>
+          </select>
+        </label> 
+        <label for="PG-13"><input type="radio" id="PG-13" name="rating" value="PG-13" class="inline"> PG-13</label>
+        <label for="R"><input type="radio" id="rating" name="rating" value="R" class="inline"> R</label>
+        <label id="runtime-label" for="runtime">Runtime: <input id="runtime" name="runtime" type="number" placeholder="minutes"></label>
+      </fieldset>
+      <fieldset> <!-- customization fieldset -->
+        <p>Which of these do you want in the movie? (check all that apply)<p>
+        <label for="people" id="people-label">
+          <input type="checkbox" id="people" name="people" value="people" class="inline"> people</label>
+        <label for="animals" id="animals-label">
+          <input type="checkbox" id="animals" name="animals" value="animals" class="inline"> animals</label>
+        <label for="mythical-creatures" id="mythical-creatures-label" name="mythical-creatures-label">
+          <input type="checkbox" id="mythical-creatures" name="mythical-creatures" value="mythical-creatures" class="inline"> mythical creatures</label>
+        <label id="film-details" name="film-details">Film customizations
+          <textarea rows=5 cols=30 placeholder="The main character is a huge nerd who loves..."></textarea>
+        </label>
+      </fieldset>
+      <input id="submit" type="submit">
+    </form>
+  </body>
+</html>
